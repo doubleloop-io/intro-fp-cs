@@ -4,7 +4,7 @@ using Xunit;
 
 namespace IntroFp.Solutions;
 
-public class _01_Creation_Phase_Tests
+public class _01_Creation_Phase
 {
     private record Item(int Qty);
 
