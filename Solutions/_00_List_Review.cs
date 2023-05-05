@@ -3,7 +3,7 @@ using Xunit;
 
 namespace IntroFp.Solutions;
 
-public class ListTests
+public class _00_List_Review
 {
     [Fact(Skip = "TODO")]
     public void linq_filled_list()

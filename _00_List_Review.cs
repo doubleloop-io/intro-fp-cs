@@ -4,7 +4,7 @@ using Xunit;
 namespace IntroFp;
 
 // TODO 1: for each test, remove the skip marker and make it green
-public class ListTests
+public class _00_List_Review
 {
     [Fact(Skip = "TODO")]
     public void linq_filled_list()
