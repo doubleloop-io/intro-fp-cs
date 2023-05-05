@@ -45,7 +45,7 @@ public class _08_Custom_Option
         public static IOption<T> None<T>() => new None<T>();
     }
 
-    [Fact]
+    [Fact(Skip = "TODO")]
     public void creation_phase()
     {
         var result = Prelude.Some(10);
@@ -53,7 +53,7 @@ public class _08_Custom_Option
         Assert.Equal(new Some<int>(10), result);
     }
 
-    [Fact]
+    [Fact(Skip = "TODO")]
     public void combination_phase_normal()
     {
         var result = Prelude.Some(10)
@@ -62,7 +62,7 @@ public class _08_Custom_Option
         Assert.Equal(new Some<int>(11), result);
     }
 
-    [Fact]
+    [Fact(Skip = "TODO")]
     public void combination_phase_effectful()
     {
         var result = Prelude.Some(10)
@@ -71,7 +71,7 @@ public class _08_Custom_Option
         Assert.Equal(new Some<string>("01"), result);
     }
 
-    [Fact]
+    [Fact(Skip = "TODO")]
     public void removal_phase_value()
     {
         var result = Prelude.Some(10)
@@ -80,7 +80,7 @@ public class _08_Custom_Option
         Assert.Equal("10", result);
     }
 
-    [Fact]
+    [Fact(Skip = "TODO")]
     public void removal_phase_alternative_value()
     {
         var result = Prelude.None<int>()

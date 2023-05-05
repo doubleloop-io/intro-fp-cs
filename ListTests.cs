@@ -3,9 +3,10 @@ using Xunit;
 
 namespace IntroFp;
 
+// TODO 1: for each test, remove the skip marker and make it green
 public class ListTests
 {
-    [Fact(Skip = "skip")]
+    [Fact(Skip = "TODO")]
     public void linq_filled_list()
     {
         // create a list of ints
@@ -23,7 +24,7 @@ public class ListTests
         // Assert.Equal(   , result);
     }
 
-    [Fact(Skip = "skip")]
+    [Fact(Skip = "TODO")]
     public void linq_empty_list()
     {
         // create an empty list of ints
@@ -41,7 +42,7 @@ public class ListTests
         // Assert.Equal(   , result);
     }
 
-    [Fact(Skip = "skip")]
+    [Fact(Skip = "TODO")]
     public void not_linq_but_functional_programming()
     {
         // create a list of ints
@@ -59,7 +60,7 @@ public class ListTests
         // Assert.Equal(   , result);
     }
 
-    [Fact(Skip = "skip")]
+    [Fact(Skip = "TODO")]
     public void immutable_list()
     {
         // given an immutable list of ints (LangExt)
@@ -77,7 +78,7 @@ public class ListTests
         // Assert.Equal(   , result);
     }
 
-    [Fact(Skip = "skip")]
+    [Fact(Skip = "TODO")]
     public void query_expression_list()
     {
         var result =
@@ -97,7 +98,7 @@ public class ListTests
         // Assert.Equal(   , result);
     }
 
-    [Fact(Skip = "skip")]
+    [Fact(Skip = "TODO")]
     public void query_expression_immutable_list()
     {
         var result =
