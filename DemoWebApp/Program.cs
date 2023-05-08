@@ -1,8 +1,17 @@
+using DemoWebApp.Handlers;
+using DemoWebApp.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
+builder.Services.Configure<RouteOptions>(x => x.LowercaseUrls = true);
+
+builder.Services.AddSingleton<IItemRepository, InMemoryItemRepository>();
+builder.Services.AddSingleton<GetItemQueryHandler>();
+builder.Services.AddSingleton<CreateItemCommandHandler>();
+builder.Services.AddSingleton<CheckInItemsCommandHandler>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
