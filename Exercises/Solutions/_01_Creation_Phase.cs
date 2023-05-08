@@ -2,7 +2,7 @@ using System.Text.RegularExpressions;
 using LanguageExt;
 using Xunit;
 
-namespace IntroFp.Solutions;
+namespace Exercises.Solutions;
 
 public class _01_Creation_Phase
 {
@@ -21,7 +21,7 @@ public class _01_Creation_Phase
             ? new Valid(new Item(int.Parse(qty)))
             : new Invalid();
 
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void valid_creation()
     {
         var result = ParseItem("100");
@@ -45,7 +45,7 @@ public class _01_Creation_Phase
             ? Prelude.Some(new Item(int.Parse(qty)))
             : Prelude.None;
 
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void valid_creation_langext()
     {
         var result = ParseItem_LangExt("100");

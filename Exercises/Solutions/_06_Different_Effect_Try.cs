@@ -2,7 +2,7 @@ using System.Text.RegularExpressions;
 using LanguageExt;
 using Xunit;
 
-namespace IntroFp.Solutions;
+namespace Exercises.Solutions;
 
 public class _06_Different_Effect_Try
 {
@@ -23,7 +23,7 @@ public class _06_Different_Effect_Try
             : Prelude.Try<Item>(() => throw new ArgumentException($"can't parse value: {qty}"));
 
 
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void checkIn_and_checkOut_after_valid_creation()
     {
         var result = ParseItem("100")
@@ -33,7 +33,7 @@ public class _06_Different_Effect_Try
         Assert.Equal(new Item(90), result.Invoke());
     }
 
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void invalid_creation()
     {
         var result = ParseItem("asd")
@@ -43,7 +43,7 @@ public class _06_Different_Effect_Try
         Assert.True(result.Invoke().IsFaulted);
     }
 
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void invalid_checkOut()
     {
         var result = ParseItem("100")

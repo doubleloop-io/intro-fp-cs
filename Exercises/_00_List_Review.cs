@@ -1,7 +1,7 @@
 using LanguageExt;
 using Xunit;
 
-namespace IntroFp;
+namespace Exercises;
 
 // TODO 1: for each test, remove the skip marker and make it green
 public class _00_List_Review

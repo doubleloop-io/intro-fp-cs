@@ -2,7 +2,7 @@ using System.Text.RegularExpressions;
 using LanguageExt;
 using Xunit;
 
-namespace IntroFp.Solutions;
+namespace Exercises.Solutions;
 
 public class _04_Removal_Phase
 {
@@ -22,7 +22,7 @@ public class _04_Removal_Phase
             ? Prelude.Some(new Item(int.Parse(qty)))
             : Prelude.None;
 
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void match_after_valid_creation()
     {
         var result = ParseItem("100")
@@ -31,7 +31,7 @@ public class _04_Removal_Phase
         Assert.Equal("100", result);
     }
 
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void match_after_invalid_creation()
     {
         var result = ParseItem("asd")
@@ -40,7 +40,7 @@ public class _04_Removal_Phase
         Assert.Equal("alternative value", result);
     }
 
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void get_after_valid_creation()
     {
         var result = ParseItem("100")
@@ -49,7 +49,7 @@ public class _04_Removal_Phase
         Assert.Equal(new Item(100), result);
     }
 
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void get_after_invalid_creation()
     {
         var result = ParseItem("asd")

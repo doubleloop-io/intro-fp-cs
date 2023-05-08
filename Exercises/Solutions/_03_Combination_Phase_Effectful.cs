@@ -2,7 +2,7 @@ using System.Text.RegularExpressions;
 using LanguageExt;
 using Xunit;
 
-namespace IntroFp.Solutions;
+namespace Exercises.Solutions;
 
 public class _03_Combination_Phase_Effectful
 {
@@ -22,7 +22,7 @@ public class _03_Combination_Phase_Effectful
             ? Prelude.Some(new Item(int.Parse(qty)))
             : Prelude.None;
 
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void checkOut_after_valid_creation()
     {
         var result = ParseItem("100")
@@ -31,7 +31,7 @@ public class _03_Combination_Phase_Effectful
         Assert.Equal(Prelude.Some(new Item(90)), result);
     }
 
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void checkIn_and_checkOut_after_valid_creation()
     {
         var result = ParseItem("100")
@@ -41,7 +41,7 @@ public class _03_Combination_Phase_Effectful
         Assert.Equal(Prelude.Some(new Item(90)), result);
     }
 
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void invalid_checkOut()
     {
         var result = ParseItem("100")
@@ -50,7 +50,7 @@ public class _03_Combination_Phase_Effectful
         Assert.Equal(Prelude.None, result);
     }
 
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void checkOut_after_invalid_creation()
     {
         var result = ParseItem("asd")

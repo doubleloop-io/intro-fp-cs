@@ -1,11 +1,11 @@
 using LanguageExt;
 using Xunit;
 
-namespace IntroFp.Solutions;
+namespace Exercises.Solutions;
 
 public class _00_List_Review
 {
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void linq_filled_list()
     {
         var result = new List<int> { 12, 9, 555 }
@@ -16,7 +16,7 @@ public class _00_List_Review
         Assert.Equal("12 12 9 9 555 555 ", result);
     }
 
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void linq_empty_list()
     {
         var result = new List<int>()
@@ -27,7 +27,7 @@ public class _00_List_Review
         Assert.Equal("", result);
     }
 
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void not_linq_but_functional_programming()
     {
         var result = new List<int> { 12, 9, 555 }
@@ -38,7 +38,7 @@ public class _00_List_Review
         Assert.Equal("12 12 9 9 555 555 ", result);
     }
 
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void immutable_list()
     {
         var result = Prelude.List(12, 9, 555)
@@ -49,7 +49,7 @@ public class _00_List_Review
         Assert.Equal("12 12 9 9 555 555 ", result);
     }
 
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void query_expression_list()
     {
         var result =
@@ -63,7 +63,7 @@ public class _00_List_Review
         Assert.Equal("12 12 9 9 555 555 ", result);
     }
 
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void query_expression_immutable_list()
     {
         var result =
