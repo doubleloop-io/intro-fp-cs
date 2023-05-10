@@ -50,26 +50,23 @@ public class _04_Removal_Phase
     public void get_after_valid_creation()
     {
         var result = ParseItem("100")
-            // TODO 6: see OptionExt class
-            .ValueOrDefault(new Item(0));
+            // TODO 6: use 'IfNone' to get the value (valid case)
+            // https://louthy.github.io/language-ext/LanguageExt.Core/Monads/Alternative%20Value%20Monads/Option/Option/index.html#Option_1_IfNone_0
+            ;
 
-        Assert.Equal(new Item(100), result);
+        // TODO 7: uncomment the assert
+        // Assert.Equal(new Item(100), result);
     }
 
-    // NOTE: see OptionExt class
     [Fact(Skip = "TODO")]
     public void get_after_invalid_creation()
     {
         var result = ParseItem("asd")
-            // TODO 7: see OptionExt class
-            .ValueOrDefault(new Item(0));
+            // TODO 8: use 'IfNone' to get an alternative value (invalid case)
+            // https://louthy.github.io/language-ext/LanguageExt.Core/Monads/Alternative%20Value%20Monads/Option/Option/index.html#Option_1_IfNone_0
+            ;
 
-        Assert.Equal(new Item(0), result);
+        // TODO 9: uncomment the assert
+        // Assert.Equal(new Item(0), result);
     }
-}
-
-public static class OptionExt
-{
-    public static T ValueOrDefault<T>(this Option<T> actual, T @default) =>
-        actual.Match(x => x, @default);
 }

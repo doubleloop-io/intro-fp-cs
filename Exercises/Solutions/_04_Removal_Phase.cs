@@ -44,7 +44,7 @@ public class _04_Removal_Phase
     public void get_after_valid_creation()
     {
         var result = ParseItem("100")
-            .ValueOrDefault(new Item(0));
+            .IfNone(new Item(0));
 
         Assert.Equal(new Item(100), result);
     }
@@ -53,14 +53,8 @@ public class _04_Removal_Phase
     public void get_after_invalid_creation()
     {
         var result = ParseItem("asd")
-            .ValueOrDefault(new Item(0));
+            .IfNone(new Item(0));
 
         Assert.Equal(new Item(0), result);
     }
-}
-
-public static class OptionExt
-{
-    public static T ValueOrDefault<T>(this Option<T> actual, T @default) =>
-        actual.Match(x => x, @default);
 }
