@@ -14,6 +14,11 @@ public class InMemoryItemRepository : IItemRepository
         _state = new ConcurrentDictionary<Guid, Item>();
     }
 
+    public TryAsync<Item> LoadOneRequired(Guid id) =>
+        LoadOne(id)
+            .Map(optItem => 
+                optItem.IfNone(() => throw new InvalidOperationException($"Item not found: {id}")));
+
     public TryAsync<Option<Item>> LoadOne(Guid id) =>
         Prelude.Try(() => TryGetValue(id)).ToAsync();
 

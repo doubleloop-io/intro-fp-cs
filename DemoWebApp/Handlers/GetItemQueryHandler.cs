@@ -14,8 +14,5 @@ public class GetItemQueryHandler
     public TryAsync<Item> Handle(GetItemQuery query) =>
         _repository.LoadOne(query.Id)
             .Map(optItem =>
-                OnItemFound(query.Id, optItem, item => item));
-
-    private static Item OnItemFound(Guid id, Option<Item> optItem, Func<Item, Item> action) =>
-        optItem.Match(action, () => throw new InvalidOperationException($"Item not found: {id}"));
+                optItem.IfNone(() => throw new InvalidOperationException($"Item not found: {query.Id}")));
 }

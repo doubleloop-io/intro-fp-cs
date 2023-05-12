@@ -5,6 +5,7 @@ namespace DemoWebApp.Handlers;
 
 public interface IItemRepository
 {
+    TryAsync<Item> LoadOneRequired(Guid id);
     TryAsync<Option<Item>> LoadOne(Guid id);
     TryAsync<Unit> Save(Item item);
 }
